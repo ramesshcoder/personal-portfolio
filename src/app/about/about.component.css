@@ -42,7 +42,8 @@
  .about-content p{
    color: white;
    font-size: 20px;
-   margin: 2em 0 3em;
+   margin: 2em 0 3em ;
+line-height:30px;
  }
  .about-content h3{
    font-size: 62px;
