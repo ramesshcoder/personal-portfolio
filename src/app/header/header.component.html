@@ -1,13 +1,16 @@
 <header class="header">
   <a href="#home" class="logo"><span>Ramesh </span>kumar</a>
-  <nav class="nav">
+  <div class="menu-icon" (click)="toggleMenu()">☰</div>
+
+  <nav class="nav" [class.show]="menuVisible">
     <a href="#about">About</a>
 
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#contact" class="contact">Contact</a>
   </nav>
-  <a href="#contact" class="contact">Contact</a>
+  
 </header>
 <!-- main content -->
 <div class="main" id="home">
@@ -20,14 +23,15 @@
       continuous learning.
     </p>
     <div class="btn-box">
-      <button class="btn-1">Experience</button>
-      <button class="btn-2">Hire me</button>
+      <button class="btn-2"><a href="mailto:rameshkumarer321@gmail.com">Hire me📧</a></button>
+      <p class="hidden-text">just an E-mail away</p>
     </div>
   </div>
   <div class="img-box">
     <img src="https://i.postimg.cc/VLGddYTN/erasebg-transformed.png" />
   </div>
 </div>
+
 <!-- about section -->
 <div class="about" id="about">
   <div class="image-container">
@@ -48,6 +52,7 @@
     <a href="" class="btn-2">Experience</a>
   </div>
 </div>
+
 <!-- education section -->
 <section id="education" class="education-section">
   <h2 class="section-title">🎓 My Education</h2>
@@ -57,7 +62,7 @@
       <div class="icon-circle">
         <i class="fas fa-university"></i>
       </div>
-      <h3>B.Tech in CSE</h3>
+      <h3>B.Tech in Computer science & engineering</h3>
       <p class="institution">SR Group Of Institutions, Lucknow</p>
       <p class="duration">2021 - 2025</p>
       <p class="description">
@@ -92,6 +97,7 @@
     </div>
   </div>
 </section>
+<hr class="hr" />
 <!--skills section  -->
 <section id="skills" class="skills-section">
   <h2 class="section-title">Skills & Tools</h2>
@@ -150,6 +156,7 @@
     </div>
   </div>
 </section>
+<hr class="hr" />
 
 <!-- project section -->
 <section id="projects" class="projects-section">
@@ -186,25 +193,26 @@
     </div>
   </div>
 </section>
+<hr class="hr" />
 <!-- contact section -->
 <div class="contact-form" id="contact">
   <h2 class="contact-me">Contact <span>Me</span></h2>
-  <form action="#">
+  <form #form="ngForm" (ngSubmit)="submitForm(form)">
     <div class="input-box">
-      <input type="text" placeholder="full name" />
-      <input type="email" placeholder="Email" />
+      <input name="name" ngModel type="text" placeholder="full name" />
+      <input type="email" name="email"  ngModel placeholder="Email" />
     </div>
     <div class="input-box">
-      <input type="number" placeholder="Phone number" />
-      <input type="text" placeholder="Subject" />
+      <input type="number" name="number" ngModel placeholder="Phone number" />
+      <input type="text" placeholder="Subject" name="subject" ngModel />
     </div>
     <textarea
-      name=""
+      name="message" ngModel
       id=""
       cols="30"
       rows="5"
       placeholder="Your mesage"
     ></textarea>
-    <input type="submit" name="" id="" value="Send-message" class="btn-1" />
+    <input type="submit" (click)="msgSent()" id="" value="Send-message" class="btn-1" />
   </form>
 </div>

@@ -60,3 +60,23 @@
     color: white;
      
 }
+/*            responsive styling */
+@media (max-width: 600px) {
+  .footer .social a {
+    margin: 0 0.6em;
+    font-size: 20px;
+  }
+
+  .footer .list {
+    flex-direction: column;
+    gap: 0.8em;
+  }
+
+  .footer .list li a {
+    font-size: 16px;
+  }
+
+  .footer .copyright {
+    font-size: 13px;
+  }
+}
