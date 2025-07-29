@@ -10,7 +10,6 @@
     <a href="#projects">Projects</a>
     <a href="#contact" class="contact">Contact</a>
   </nav>
-  
 </header>
 <!-- main content -->
 <div class="main" id="home">
@@ -23,7 +22,9 @@
       continuous learning.
     </p>
     <div class="btn-box">
-      <button class="btn-2"><a href="mailto:rameshkumarer321@gmail.com">Hire me📧</a></button>
+      <button class="btn-2">
+        <a href="mailto:rameshkumarer321@gmail.com">Hire me📧</a>
+      </button>
       <p class="hidden-text">just an E-mail away</p>
     </div>
   </div>
@@ -165,31 +166,35 @@
   <div class="projects-grid">
     <div class="project-card">
       <i class="fas fa-window-maximize project-icon"></i>
-      <h3>Portfolio Website</h3>
+      <h3>Personal Portfolio Website</h3>
       <p class="description1">
         A personal portfolio built using Angular to showcase my skills and
         projects.
       </p>
-      <button class="btn">View Details</button>
+      <button class="btn"><a href="">View</a></button>
     </div>
 
     <div class="project-card">
       <i class="fas fa-shopping-cart project-icon"></i>
-      <h3>E-commerce Site</h3>
+      <h3>E-commerce Site (eShop)</h3>
       <p class="description1">
         An online shopping platform with cart, checkout, and payment features.
       </p>
-      <button class="btn">View Details</button>
+      <button class="btn">
+        <a href="https://github.com/ramesshcoder/eshop">View</a>
+      </button>
     </div>
 
     <div class="project-card">
       <i class="fas fa-tasks project-icon"></i>
-      <h3>Task Management</h3>
+      <h3>Student Management (eduDesk)</h3>
       <p class="description1">
         A task tracker web app for managing and organizing daily to-do lists and
-        tasks of user
+        tasks
       </p>
-      <button class="btn">View Details</button>
+      <button class="btn">
+        <a href="https://edudesk-management.netlify.app/"> view</a>
+      </button>
     </div>
   </div>
 </section>
@@ -200,19 +205,26 @@
   <form #form="ngForm" (ngSubmit)="submitForm(form)">
     <div class="input-box">
       <input name="name" ngModel type="text" placeholder="full name" />
-      <input type="email" name="email"  ngModel placeholder="Email" />
+      <input type="email" name="email" ngModel placeholder="Email" />
     </div>
     <div class="input-box">
       <input type="number" name="number" ngModel placeholder="Phone number" />
       <input type="text" placeholder="Subject" name="subject" ngModel />
     </div>
     <textarea
-      name="message" ngModel
+      name="message"
+      ngModel
       id=""
       cols="30"
       rows="5"
       placeholder="Your mesage"
     ></textarea>
-    <input type="submit" (click)="msgSent()" id="" value="Send-message" class="btn-1" />
+    <input
+      type="submit"
+      (click)="msgSent()"
+      id=""
+      value="Send-message"
+      class="btn-1"
+    />
   </form>
 </div>
