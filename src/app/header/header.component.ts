@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
-  imports: [FormsModule,NgIf],
+  imports: [FormsModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
