@@ -1,10 +1,11 @@
+import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-header',
-  imports: [FormsModule],
+  imports: [FormsModule,NgIf],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -13,11 +14,13 @@ export class HeaderComponent {
   toggleMenu(){
       this.menuVisible = !this.menuVisible;
       
+      
 
 
    
 
 }
+
 submitForm(form:any) {
   const name = form.value.name;
   const email = form.value.email;

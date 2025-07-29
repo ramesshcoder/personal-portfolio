@@ -1,4 +1,4 @@
-<div class="footer" *ngIf="!faqs">
+<div class="footer" *ngIf="!faqs && !policy">
   <div class="social">
     <a href="https://www.linkedin.com/in/ramesh-kumar001/"
       ><i class="fa-brands fa-linkedin"></i
@@ -22,7 +22,7 @@
       <a href="#contact">contact</a>
     </li>
     <li>
-      <a href="https://policies.google.com/privacy?hl=en-GB">privacy policy</a>
+      <a (click)="openPrivacy()">privacy policy</a>
     </li>
   </ul>
   <p class="copyright">©️ 2025 Ramesh | All rights Reserved</p>
@@ -63,7 +63,7 @@
   </div>
   <button class="btn-1" (click)="closeFaqs()">Back</button>
 </div>
-<div id="privacy-policy" style="padding: 40px; max-width: 900px; margin: auto; font-family: Arial, sans-serif; line-height: 1.6;">
+<div *ngIf="policy" id="privacy-policy" style="padding: 40px; max-width: 900px; margin: auto; font-family: Arial, sans-serif; line-height: 1.6;">
   <h1 style="text-align: center; margin-bottom: 20px;">Privacy Policy</h1>
   <p><strong>Last Updated:</strong> July 28, 2025</p>
   
@@ -88,5 +88,8 @@
   <p>I may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated revision date.</p>
   
   <p>If you have any questions or concerns about this Privacy Policy, feel free to <a href="mailto:youremail@example.com">contact me</a>.</p>
+  <button (click)="closePrivacy()" class="btn-1">
+    back
+  </button>
 </div>
 

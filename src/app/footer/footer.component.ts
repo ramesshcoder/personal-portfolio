@@ -17,7 +17,10 @@ faqs=false
     this.faqs=false
   }
   policy=false;
-  ppolicy(){
-    this.policy=true
+  closePrivacy(){
+    this.policy=false
+  }
+  openPrivacy(){
+    this.policy=true;
   }
 }
